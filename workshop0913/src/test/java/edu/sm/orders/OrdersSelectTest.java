@@ -1,4 +1,4 @@
-package edu.sm.Orders;
+package edu.sm.orders;
 
 import edu.sm.dto.Orders;
 import edu.sm.service.OrdersService;

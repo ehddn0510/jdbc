@@ -20,6 +20,9 @@ public class Product {
         this.registrationDate = registrationDate;
     }
 
+    // 기본 생성자
+    public Product() {}
+
     // Getter와 Setter
     public int getId() {
         return id;

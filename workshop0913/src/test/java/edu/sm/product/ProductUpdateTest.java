@@ -3,20 +3,18 @@ package edu.sm.product;
 import edu.sm.dto.Product;
 import edu.sm.service.ProductService;
 
-import java.sql.SQLException;
-
 public class ProductUpdateTest {
     public static void main(String[] args) {
         try {
             ProductService productService = new ProductService();
-            Product product = productService.getProductById(1); // 1번 상품 가져오기
+            Product product = productService.selectOne(1);  // getProductById를 selectOne으로 변경
             if (product != null) {
                 product.setName("Updated Laptop");
                 product.setPrice(9000);
-                productService.updateProduct(product);
+                productService.update(product);  // updateProduct를 update로 변경
                 System.out.println("상품이 성공적으로 수정되었습니다.");
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
